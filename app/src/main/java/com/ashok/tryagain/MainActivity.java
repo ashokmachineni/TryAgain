@@ -1,7 +1,10 @@
 package com.ashok.tryagain;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -73,9 +76,21 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Transaction transaction = firebaseRecyclerAdapter.getItem(viewHolder.getAdapterPosition());
+            //For play with Vitamio Library
                         VideoPlayer.pathToFileOrUrl = transaction.getLink();
                         Intent intent = new Intent(MainActivity.this,VideoPlayer.class);
                         startActivity(intent);
+          //this code for open with mxplayer only
+                        /*Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setDataAndType( Uri.parse(transaction.getLink()), "application/x-mpegURL" );
+                        intent.setPackage( "com.mxtech.videoplayer.ad" );
+                        startActivity( intent );*/
+               //This code for open with any player
+                        /*Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setDataAndType(Uri.parse(transaction.getLink()), "video*//*");
+                        //startActivity(Intent.createChooser(intent, "Complete action using"));
+                        startActivity(Intent.createChooser(intent, "Complete action using"));*/
+
 
                     }
                 });
