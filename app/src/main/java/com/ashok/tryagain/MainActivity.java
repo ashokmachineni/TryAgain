@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(Intent.createChooser(intent, "Complete action using"));*/
         //Exoplayer
                         Intent intent = new Intent(MainActivity.this, ExoPlayerActivity.class);
-                        
+
                         //intent.putExtra(ExoPlayerActivity.EXTRA_URL, getString(R.string.link));
                         //intent.setDataAndType(Uri.parse(transaction.getLink(),ExoPlayerActivity.EXTRA_URL))
                         startActivity(intent);
