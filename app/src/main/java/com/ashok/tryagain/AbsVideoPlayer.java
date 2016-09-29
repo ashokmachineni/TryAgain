@@ -99,7 +99,7 @@ public abstract class AbsVideoPlayer extends AbsVideoPlayerImpl implements Audio
             mPlayerController = new PlayerControl(mExoPlayer);
             mExoPlayer.setPlayWhenReady(true);
             mExoPlayer.addListener(this);
-            mBuilder.build(getContext(), this, mUrl);
+            //mBuilder.build(getContext(), this, mUrl);
         }
     }
 

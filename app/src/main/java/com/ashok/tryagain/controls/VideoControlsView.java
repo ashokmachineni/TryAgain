@@ -11,9 +11,10 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.doubleencore.mpatterson.R;
-import com.doubleencore.mpatterson.interfaces.IControlsListener;
-import com.doubleencore.mpatterson.interfaces.IPlayerListener;
+import com.ashok.tryagain.IControlsListener;
+import com.ashok.tryagain.IPlayerListener;
+import com.ashok.tryagain.R;
+
 
 /**
  * Created by michael on 11/27/15.

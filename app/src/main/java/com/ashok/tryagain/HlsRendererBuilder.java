@@ -72,7 +72,7 @@ public class HlsRendererBuilder implements ManifestFetcher.ManifestCallback<HlsP
     public void onSingleManifest(HlsPlaylist manifest) {
         if (mCanceled) return;
 
-        if (manifest == null || ! (manifest instanceof HlsMasterPlaylist)) {
+        if (manifest == null || !(manifest instanceof HlsMasterPlaylist)) {
             mPlayer.onFailure(new IllegalStateException("Failed to retrieve a valid hlsPlaylist"));
             return;
         }

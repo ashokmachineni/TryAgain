@@ -6,13 +6,13 @@
     android:fitsSystemWindows="true"
     android:keepScreenOn="true">
 
-    <com.doubleencore.mpatterson.exoplayer.VideoPlayerView
+    <com.ashok.tryagain.VideoPlayerView
         android:id="@+id/player_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true" />
 
-    <com.doubleencore.mpatterson.controls.ControlsContainer
+    <com.ashok.tryagain.controls.ControlsContainer
         android:id="@+id/controls_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
