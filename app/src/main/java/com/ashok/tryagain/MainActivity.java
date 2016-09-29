@@ -77,9 +77,9 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         Transaction transaction = firebaseRecyclerAdapter.getItem(viewHolder.getAdapterPosition());
             //For play with Vitamio Library
-                        VideoPlayer.pathToFileOrUrl = transaction.getLink();
+                        /*VideoPlayer.pathToFileOrUrl = transaction.getLink();
                         Intent intent = new Intent(MainActivity.this,VideoPlayer.class);
-                        startActivity(intent);
+                        startActivity(intent);*/
           //this code for open with mxplayer only
                         /*Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setDataAndType( Uri.parse(transaction.getLink()), "application/x-mpegURL" );
@@ -90,6 +90,13 @@ public class MainActivity extends AppCompatActivity {
                         intent.setDataAndType(Uri.parse(transaction.getLink()), "video*//*");
                         //startActivity(Intent.createChooser(intent, "Complete action using"));
                         startActivity(Intent.createChooser(intent, "Complete action using"));*/
+        //Exoplayer
+                        Intent intent = new Intent(MainActivity.this, ExoPlayerActivity.class);
+                        
+                        //intent.putExtra(ExoPlayerActivity.EXTRA_URL, getString(R.string.link));
+                        //intent.setDataAndType(Uri.parse(transaction.getLink(),ExoPlayerActivity.EXTRA_URL))
+                        startActivity(intent);
+
 
 
                     }
